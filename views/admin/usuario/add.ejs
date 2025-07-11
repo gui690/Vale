@@ -1,0 +1,53 @@
+<%-include('../cabecalho.ejs')%>
+<body>
+
+    <div class="container">
+        <button type="button" class="bnt voltar" onclick="window.history.back()">Voltar</button>
+        <h1>Adicionar usuario  </h1>
+        <form action="/admin/usuario/add" method="post">
+            <div class="form-group">
+                <input type="hidden" id="id" name="id" value="<%=Usuario.id%>"> <!--ID da cotacao -->
+                
+            </div>
+            <div>
+            <div class="form-group">
+                <label for="nome">Nome do usuario  </label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" name="valor" required>
+              </div>
+
+            
+             <div class="form-group">
+                    <label for="dataCriacao">Data de criação</label>
+                    <input type="date" id="dataCriacao" name="dataCriacao" required>
+                  </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" step="0.01"  required >
+            
+              </div>
+            <div class="form-group">
+                <label for="cpf">CPF </label>
+                <input type="string" id="cpf" name="cpf" step="0.1"  required >
+              </div>
+             <div class="form-group">
+                <label for="telefone">Telefone </label>
+                <input type="string" id="telefone" name="telefone" step="0.1"  required >
+            
+            </div>
+         </div>
+
+
+            <button type="submit">Adicionar usuario</button>
+            <button type="button" class="bnt cancelar" onclick="window.history.back()">Cancelar</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

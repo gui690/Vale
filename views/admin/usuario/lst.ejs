@@ -1,0 +1,54 @@
+<%-include('../cabecalho.ejs')%>
+
+    <body>
+
+        <div class="container">
+            <form action="/admin/usuario/lst" method="post" class="form-inline" style="margin-bottom: 20px;">
+                <input type="text" name="pesquisar" placeholder="Pesquisar por nome" required>
+                <button type="submit">Pesquisar</button>
+              </form>
+            <h1>usuario</h1>
+          
+                <a href="/admin/usuario/add" class="add-btn">+ usuario</a>
+           
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Data de Criação</th>
+                        <th>Email</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th colspan="2">Ações</th> <!-- Adiciona espaço para Editar e Deletar -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <%Usuario.forEach(function(usuario){%>
+                    <tr>
+
+                        <td><%=usuario.nome%></td>
+                        <td><%=usuario.valor%></td>
+                        <td><%=usuario.dataCriacao.toLocaleDateString('pt-BR')%></td>
+                        <td><%=usuario.email%></td>
+                        <td><%=usuario.cpf%></td>
+                        <td><%=usuario.telefone%></td>
+                        
+
+                        <td class="action-buttons">
+                            <a href="/admin/usuario/edt/<%= usuario.id %>" class="edit-btn"><i class="fas fa-edit"></i> Editar</a>
+                            <a href="/admin/usuario/del/<%= usuario._id %>" class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar este usuario?')">Deletar</a>
+                            
+                            </td>
+                    </tr>
+                    <%})%>
+                 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+
+    </html>

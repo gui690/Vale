@@ -1,0 +1,252 @@
+/* Fundo geral com degrade azul escuro para branco */
+body {
+  background: linear-gradient(180deg, #0d1b2a, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0a2e66; /* azul escuro para texto */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container geral para formulários e tabelas */
+.container,
+.container-list,
+.container-form {
+  max-width: 960px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(13, 27, 42, 0.15);
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #08244b; /* azul escuro */
+}
+
+/* Formulários */
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #08306b;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #a7c7e7;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #08306b;
+  background-color: #f7fbff;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #1e40af; /* azul forte */
+  box-shadow: 0 0 8px rgba(30, 64, 175, 0.5);
+  background-color: #e0ebff;
+}
+
+/* Botões */
+button,
+.btn {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Botão azul primário */
+button[type="submit"],
+.btn-submit,
+.add-btn {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.6);
+}
+
+button[type="submit"]:hover,
+.btn-submit:hover,
+.add-btn:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.75);
+}
+
+/* Botões vermelhos para cancelar/deletar */
+button.bnt.cancelar,
+button.bnt.voltar,
+.btn-cancel,
+a.delete-btn {
+  background: linear-gradient(90deg, #b91c1c, #ef4444);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.6);
+  color: white;
+}
+
+button.bnt.cancelar:hover,
+button.bnt.voltar:hover,
+.btn-cancel:hover,
+a.delete-btn:hover {
+  background: linear-gradient(90deg, #991b1b, #dc2626);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.75);
+}
+
+/* Links botões */
+a.add-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Tabela estilizada */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+thead th {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  color: white;
+  padding: 14px;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 700;
+  border-radius: 6px 6px 0 0;
+}
+
+tbody tr:nth-child(even) {
+  background: #f0f5ff;
+}
+
+tbody tr:hover {
+  background: #dbe9ff;
+}
+
+tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #cbd5e1;
+  white-space: nowrap;
+  color: #0a2e66;
+}
+
+/* Ações na tabela */
+.action-buttons a.edit-btn {
+  color: #2563eb;
+  margin-right: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.action-buttons a.edit-btn:hover {
+  text-decoration: underline;
+}
+
+.action-buttons a.delete-btn {
+  color: #ef4444;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.action-buttons a.delete-btn:hover {
+  text-decoration: underline;
+}
+
+/* Formulário de pesquisa */
+form.form-inline {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+form.form-inline input[type="text"] {
+  width: 300px;
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #a7c7e7;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0a2e66;
+  background-color: #f7fbff;
+}
+
+form.form-inline input[type="text"]:focus {
+  border-color: #1e40af;
+  box-shadow: 0 0 8px rgba(30, 64, 175, 0.5);
+  outline: none;
+  background-color: #e0ebff;
+}
+
+form.form-inline button {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.form-inline button:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+  table {
+    min-width: 100%;
+  }
+  .action-buttons a.edit-btn,
+  .action-buttons a.delete-btn {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .container,
+  .container-list,
+  .container-form {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  form.form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form.form-inline input[type="text"],
+  form.form-inline button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
