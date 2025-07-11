@@ -250,3 +250,57 @@ form.form-inline button:hover {
     margin-bottom: 10px;
   }
 }
+/* Estilo da página de entrada (index) */
+.hero-container {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #e0f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-box {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 4px solid #1e3a8a;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero-box h1 {
+  font-size: 2.8rem;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.hero-box .highlight {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: 1.4rem;
+  color: #334155;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .hero-btn {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 16px 36px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-buttons .hero-btn:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  transform: scale(1.05);
+}
