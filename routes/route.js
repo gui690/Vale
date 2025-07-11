@@ -39,7 +39,7 @@ router.post('/admin/usuario/add', addusuario);
 router.get('/admin/usuario/lst', listarusuario);
 router.post('/admin/usuario/lst', filtrarusuario);
 //rota do modelo usuario (delete)
-router.post('/admin/usuario/del/:id', deletausuario);
+router.get('/admin/usuario/del/:id', deletausuario);
 
 //rota do modelo usuario (editar)
 
